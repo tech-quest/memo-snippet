@@ -24,13 +24,13 @@ $page = $statement->fetch();
     <input type="hidden" name="id" value=<?php echo $page['id']; ?>>
 
     <div>
-      <label for="name">title
+      <label for="name">タイトル
         <input type="text" name="title" value=<?php echo $page['title']; ?>>
       </label>
     </div>
 
     <div>
-      <label for="content">本文
+      <label for="content">感想
         <input type="textarea" name="content" value=<?php echo $page[
             'content'
         ]; ?>>
