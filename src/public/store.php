@@ -11,7 +11,7 @@ $content = filter_input(INPUT_POST, 'content');
 $title = filter_input(INPUT_POST, 'title');
 
 // [解説！]ガード節になっている
-if (!empty($title) || !empty($content)) {
+if (!empty($title) && !empty($content)) {
     $sql = 'INSERT INTO `pages`(`title`, `content`) VALUES(:title, :content)';
     $statement = $pdo->prepare($sql);
     $statement->bindValue(':title', $title, PDO::PARAM_STR);
